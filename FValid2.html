@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concepcion Validation Form 2</title>
+    <link rel="stylesheet" href="FormVal2.css">
+</head>
+<body>
+    <script>
+        function button(){
+             var password=document.getElementById("pw").value;
+             var password2=document.getElementById("pw2").value;
+        
+        if (password2!==password){
+            document.getElementById("result").innerHTML ="Passwords are not the same";
+            document.getElementById("message").innerHTML="**";
+        }
+        else{
+            document.getElementById("result").innerHTML ="";
+            return true;
+    }
+        
+}
+     </script>
+
+<div class="box">
+    <form>
+        <br>
+        <label>Login&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;<input type="text" id="username" required></label><br><br>
+        <label>Password&emsp;&emsp;&emsp;&emsp;&emsp;<input type="password" id="pw" value="" required></label>
+        <span id="message" style="color:white; font-weight: bold;"> </span><br><br>
+        <label>  Confirm password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" id="pw2" value="" required></label><br><br>
+        <label>Gender </label>
+        &nbsp;<select style="width: 170px">
+                    <option value="0" selected>Gender</option>
+                    <option value = "1">male</option>
+                    <option value ="2">female</option>
+             </select><br></br>
+        <label>Email:&emsp;&emsp;&emsp;&nbsp; &emsp;&emsp;&emsp;<input type="email" id="email" required></label><br><br>
+        &emsp;&emsp;&nbsp;<input type="submit" value="Register" onclick="button()"><br><br>
+            <div id="result" style="color:white" font-weight: bolder;"></div> <br><br><br>
+        </div>
+    </form>
+    
+</body>
+</html>
